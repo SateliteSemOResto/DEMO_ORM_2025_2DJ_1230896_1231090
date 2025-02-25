@@ -6,4 +6,9 @@ public class GrupoAutomovel {
     void setClasse(String classe) {
         this.classe = classe;
     }
+    Integer nPortas;
+
+    public void setnPortas(Integer nPortas) {
+        this.nPortas = nPortas;
+    }
 }
