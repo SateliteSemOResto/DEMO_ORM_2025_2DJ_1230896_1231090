@@ -11,4 +11,9 @@ public class GrupoAutomovel {
     public void setnPortas(Integer nPortas) {
         this.nPortas = nPortas;
     }
+
+    @Override
+    public String toString() {
+        return "GrupoAutomovel{" + "classe=" + classe + ", nPortas=" + nPortas + '}';
+    }
 }
