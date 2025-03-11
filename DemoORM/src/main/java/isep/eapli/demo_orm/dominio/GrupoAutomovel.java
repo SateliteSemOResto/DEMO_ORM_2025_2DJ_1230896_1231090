@@ -36,6 +36,6 @@ public class GrupoAutomovel {
 
     @Override
     public String toString() {
-        return "GrupoAutomovel{" + "classe=" + classe + ", nPortas=" + nPortas + "matricula"+ matricula +'}';
+        return "GrupoAutomovel{" + "id=" + id + ", nome=" + nome + ", classe=" + classe + ", nPortas=" + nPortas + ", matricula"+ matricula +'}';
     }
 }

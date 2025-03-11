@@ -9,6 +9,8 @@ import isep.eapli.demo_orm.aplicacao.GrupoAutomovelController;
 import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import isep.eapli.demo_orm.util.Console;
 
+import java.sql.SQLOutput;
+
 /**
  *
  * @author mcn
@@ -27,10 +29,16 @@ public class GrupoAutomovelUI {
         System.out.println("Grupo Automóvel" + grupoAutomovel);
     }
     public void listarGAs() {
-		throw new UnsupportedOperationException("Ainda não implementada.");
-	}
+		        System.out.println("*** Lista de Grupos Automóveis ***\n");
+        for(GrupoAutomovel ga : controller.listarGruposAutomoveis()) {
+            System.out.println(ga);
+        }
+    }
 
-	public void procurarGAPorID(long id) {
-		throw new UnsupportedOperationException("Ainda não implementada.");
+	public void procurarGAPorID() {
+        long id = Console.readInteger("Id");
+		System.out.println("*** Procurar Grupo Automóvel por ID ***\n");
+        GrupoAutomovel ga = controller.encontrarPorId(id);
+        System.out.println(ga);
 	}
 }

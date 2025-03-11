@@ -8,6 +8,8 @@ package isep.eapli.demo_orm.aplicacao;
 import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import isep.eapli.demo_orm.persistencia.GrupoAutomovelRepositorio;
 import isep.eapli.demo_orm.persistencia.GrupoAutomovelRepositorioJPAImpl;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +17,8 @@ import java.util.List;
  * @author eapli
  */
 public class GrupoAutomovelController {
+
+    GrupoAutomovelRepositorioJPAImpl repo = new GrupoAutomovelRepositorioJPAImpl();
 
     public GrupoAutomovel registarGrupoAutomóvel(String nome, int portas,
             String classe) {
@@ -24,8 +28,12 @@ public class GrupoAutomovelController {
     }
     
     public List<GrupoAutomovel> listarGruposAutomoveis() {
-		throw new UnsupportedOperationException("Ainda não implementada");
+		return repo.findAll();
 	}
+
+    public GrupoAutomovel encontrarPorId(long id){
+        return repo.findById(id);
+    }
 
 	public GrupoAutomovel procurarGrupoAutomovel(long id) {
 		throw new UnsupportedOperationException("Ainda não implementada");

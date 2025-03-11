@@ -12,8 +12,10 @@ import isep.eapli.demo_orm.util.Console;
  * @author mcn
  */
 public class MainMenu {
+
     public static void mainLoop() {
         int opcao = 0;
+        GrupoAutomovelUI grupoAutomovelUI = new GrupoAutomovelUI();
         do {
             opcao = menu();
 
@@ -22,14 +24,16 @@ public class MainMenu {
                     System.out.println("fim ...");
                     break;
                 case 1:
-                    System.out.println("Ainda não implementado ...");
+                    grupoAutomovelUI.registarGA();
                     break;
 
                 case 2:
-                    System.out.println("Ainda não implementado ...");
+                    grupoAutomovelUI.listarGAs();
                     break;
 
-
+                case 3:
+                    grupoAutomovelUI.procurarGAPorID();
+                    break;
 
                 default:
                     System.out.println("opcao não reconhecida.");
@@ -47,7 +51,7 @@ public class MainMenu {
         System.out.println("=============================\n");
         System.out.println("1.Registar Grupo Automóvel");
         System.out.println("2.Listar todos os Grupos Automóveis");
-
+        System.out.println("3.Procurar Grupo Automóvel por ID");
         System.out.println("=============================");
         System.out.println("0. Sair\n\n");
         option = Console.readInteger("Por favor escolha opção");
