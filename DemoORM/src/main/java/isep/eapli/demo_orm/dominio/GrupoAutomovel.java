@@ -17,12 +17,19 @@ public class GrupoAutomovel {
     }
     Integer nPortas;
 
+    String matricula;
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+
     public void setnPortas(Integer nPortas) {
         this.nPortas = nPortas;
     }
 
     @Override
     public String toString() {
-        return "GrupoAutomovel{" + "classe=" + classe + ", nPortas=" + nPortas + '}';
+        return "GrupoAutomovel{" + "classe=" + classe + ", nPortas=" + nPortas + "matricula"+ matricula +'}';
     }
 }
