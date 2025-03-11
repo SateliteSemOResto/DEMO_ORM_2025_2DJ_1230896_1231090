@@ -9,6 +9,7 @@ public class GrupoAutomovel {
     Long id;
 
     Integer nPortas;
+    String nome;
     String matricula;
     String classe;
 
@@ -17,6 +18,7 @@ public class GrupoAutomovel {
     public GrupoAutomovel(String nome, int portas, String classe) {
         this.classe = classe;
         this.nPortas = portas;
+        this.nome = nome;
     }
 
     void setClasse(String classe) {

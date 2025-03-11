@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package isep.eapli.demo_orm.ui;
+package isep.eapli.demo_orm.apresentacao;
 
 import isep.eapli.demo_orm.aplicacao.GrupoAutomovelController;
 import isep.eapli.demo_orm.dominio.GrupoAutomovel;
