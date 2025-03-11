@@ -8,16 +8,20 @@ public class GrupoAutomovel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
+    Integer nPortas;
+    String matricula;
     String classe;
 
     public GrupoAutomovel(){}
 
+    public GrupoAutomovel(String nome, int portas, String classe) {
+        this.classe = classe;
+        this.nPortas = portas;
+    }
+
     void setClasse(String classe) {
         this.classe = classe;
     }
-    Integer nPortas;
-
-    String matricula;
 
     public String getMatricula() {
         return matricula;
